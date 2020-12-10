@@ -7,7 +7,7 @@ let scissor = "https://static.thenounproject.com/png/31725-200.png";
 export default function App() {
   let [k, setk] = useState(0);
   let [usr, setusr] = useState({ n: 0, img: rock });
-  let [w, setw] = useState("draw");
+  let [w, setw] = useState({ po: "draw", m: ms, c: cs });
   let [im, setim] = useState(rock);
   let [ms, setms] = useState(0);
   let [cs, setcs] = useState(0);
@@ -28,13 +28,25 @@ export default function App() {
   }
   function win() {
     if (k === usr.n) {
-      setw("draw");
+      setw({ po: "draw", m: ms, c: cs });
     } else if ((usr.n === 3 && k === 2) || (usr.n === 1 && k === 3)) {
-      setw("You Win");
+      setw({
+        po: "You Win",
+        m: ms + 1,
+        c: 0
+      });
     } else if (usr.n > k && usr.n != 3) {
-      setw("You Win");
+      setw({
+        po: "You Win",
+        m: ms + 1,
+        c: 0
+      });
     } else {
-      setw("You Lose");
+      setw({
+        po: "You Lose",
+        m: 0,
+        c: cs + 1
+      });
     }
   }
   useEffect(() => {
@@ -54,7 +66,7 @@ export default function App() {
     <div className="App">
       <div className="cent">
         <div className="imgs">
-          {w}
+          {w.po}
           <div className="you">
             <img src={usr.img} alt={usr.n} />
           </div>
@@ -67,7 +79,9 @@ export default function App() {
           <div className="computer">
             <img src={im} alt={k} />
           </div>
-          <div className="span">Rock,Paper,Scissor</div>
+          <div className="span">
+            {w.m}-{w.c}
+          </div>
         </div>
       </div>
       <br />
