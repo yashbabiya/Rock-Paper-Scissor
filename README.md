@@ -1,2 +1,4 @@
 # Rock-Paper-Scissor
-Created with CodeSandbox
+
+A fun project
+View:https://csb-jdmzo-cmahl5uf0.vercel.app/
