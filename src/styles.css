@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius:20px 20px 20px 20px ;
+  
+}
+img{
+  height:200px;
+  width:200px;
+}
+.you,.computer{
+  height:50%;
+  width:100%;
+
+}
+.you{
+  background-color: aliceblue;
+  border-radius:20px 20px 0px 0px ;
+  
+}
+.computer{
+  background-color: wheat;
+  border-radius:0px 0px 20px 20px ;
+
+}
+button{
+  background:black;
+  color:white;
+  border:solid black;
+  border-radius:2px 2px 2px 2px;
+  outline:none;
+}
+.mid{
+  background:black;
+}
+.imgs{
+  background:black;
+  color:white;
+  padding:5px;
+}
+.span{
+  padding-top:2px;
+}
